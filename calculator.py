@@ -4,16 +4,23 @@ class Calculator:
             self.x = x
             self.y = y"""
         
-        def prosthesh(self, x, y):
+        def add(self, x, y):
             z = x+y
             return z
 
-        def afairesh(self, x, y):
-            print (x-y)
-        def pollaplasiasmos(self, x, y):
-            print (x*y)
-        def diairesh(self, x, y):
-            print (x/y)
+        def sub(self, x, y):
+            if x > y:
+               z = x - y 
+               return z
+            else:
+               z = y - x
+               return z
+        def mult(self, x, y):
+            z = x * y
+            return z
+        def div(self, x, y):
+            z = x / y
+            return z
 
 #main
 a = int(input("First:"))
@@ -23,6 +30,12 @@ b = int(input("Second:"))
 c = Calculator()
 
 if symbol == "+":
-    print(c.prosthesh(a,b))
+    print(c.add(a,b))
+elif symbol == "-":
+    print(c.sub(a,b))
+elif symbol == "*":
+    print(c.mul(a,b))
+elif symbol == "/":
+    print(c.div(a,b))
 else:
     print ("Error")
